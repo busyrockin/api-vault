@@ -1,0 +1,55 @@
+# Binaries
+*.exe
+*.dll
+*.so
+*.dylib
+dist/
+build/
+target/
+
+# Databases & Secrets
+*.db
+*.sqlite
+*.sqlite3
+*.key
+*.pem
+credentials.json
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Language-specific
+# Go
+go.sum
+vendor/
+
+# Rust
+Cargo.lock
+target/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+
+# Node
+node_modules/
+package-lock.json
+yarn.lock
+
+# Logs
+*.log
+logs/
