@@ -21,6 +21,9 @@ func init() {
 }
 
 func readPassword(prompt string) (string, error) {
+	if pw := os.Getenv("API_VAULT_PASSWORD"); pw != "" {
+		return pw, nil
+	}
 	fmt.Fprint(os.Stderr, prompt)
 	b, err := term.ReadPassword(int(os.Stdin.Fd()))
 	fmt.Fprintln(os.Stderr)

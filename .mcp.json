@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "api-vault": {
+      "command": "server/.venv/bin/python",
+      "args": ["server/main.py"],
+      "env": {
+        "API_VAULT_PASSWORD": "${API_VAULT_PASSWORD}"
+      }
+    }
+  }
+}
