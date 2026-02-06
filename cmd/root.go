@@ -6,7 +6,7 @@ const version = "0.1.0"
 
 var rootCmd = &cobra.Command{
 	Use:     "api-vault",
-	Short:   "Secure credential vault for API keys",
+	Short:   "Secure credential vault for AI agents",
 	Version: version,
 }
 

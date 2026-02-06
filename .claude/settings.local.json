@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(brew list:*)",
+      "Bash(brew install:*)",
+      "Bash(CGO_CFLAGS=\"-I/opt/homebrew/opt/sqlcipher/include\" CGO_LDFLAGS=\"-L/opt/homebrew/opt/sqlcipher/lib -lsqlcipher\" CGO_ENABLED=1 go mod:*)",
+      "Bash(CGO_CFLAGS=\"-I/opt/homebrew/opt/sqlcipher/include\" CGO_LDFLAGS=\"-L/opt/homebrew/opt/sqlcipher/lib -lsqlcipher\" CGO_ENABLED=1 go build:*)",
+      "Bash(CGO_CFLAGS=\"-I/opt/homebrew/opt/sqlcipher/include\" CGO_LDFLAGS=\"-L/opt/homebrew/opt/sqlcipher/lib -lsqlcipher\" CGO_ENABLED=1 go vet:*)",
+      "Bash(CGO_CFLAGS=\"-I/opt/homebrew/opt/sqlcipher/include\" CGO_LDFLAGS=\"-L/opt/homebrew/opt/sqlcipher/lib -lsqlcipher\" CGO_ENABLED=1 go test:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd test command for end-to-end encryption verification\n\nExercises the full credential lifecycle \\(create, get, list\\) against\na temporary SQLCipher database to validate dual-layer encryption.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(./api-vault:*)",
+      "WebSearch",
+      "WebFetch(domain:gofastmcp.com)",
+      "Bash(API_VAULT_PASSWORD=test ./api-vault list:*)",
+      "Bash(echo:*)",
+      "Bash(pip install:*)"
+    ]
+  }
+}
