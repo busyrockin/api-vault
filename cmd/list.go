@@ -13,6 +13,11 @@ var listCmd = &cobra.Command{
 	Short: "List all stored credentials",
 	Args:  cobra.NoArgs,
 	RunE: func(cmd *cobra.Command, args []string) error {
+		interactive, _ := cmd.Flags().GetBool("interactive")
+		if interactive {
+			return runInteractive()
+		}
+
 		db, err := openVault()
 		if err != nil {
 			return err
@@ -41,4 +46,5 @@ var listCmd = &cobra.Command{
 
 func init() {
 	rootCmd.AddCommand(listCmd)
+	listCmd.Flags().BoolP("interactive", "i", false, "Run in interactive mode")
 }
