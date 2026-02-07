@@ -1,0 +1,17 @@
+{
+  "name": "api-vault-skills",
+  "version": "0.1.0",
+  "description": "Add community skills to your Claude Code projects from GitHub repos",
+  "type": "module",
+  "bin": {
+    "skills": "./bin/skills.js"
+  },
+  "files": [
+    "bin/",
+    "lib/"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}
